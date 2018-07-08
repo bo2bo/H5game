@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ChartJs Demo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body,
+        html {
+            height: 100%;
+            width: 100%;
+        }
+
+        .content {
+            width: 600px;
+            height: 400px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <canvas id="mychart"></canvas>
+    </div>
+    <script src="./js/dist/jquery-3.3.1.min.js"></script>
+    <script src="./js/dist/chart.min.js"></script>
+    <script>
+        $(function () {
+            var ctx = new Chart(document.getElementById("mychart").getContext("2d"));
+            var options = { scaleFontSize: 13, scaleFontColor: "#ffa45e" };
+
+            // 线型图
+            var LineChart = {
+                labels: ["Ruby", "jQuery", "Java", "ASP.Net", "PHP"],
+                datasets: [{
+                    fillColor: "rgba(151,249,190,0.5)",
+                    strokeColor: "rgba(255,255,255,1)",
+                    pointColor: "rgba(220,220,220,1)",
+                    pointStrokeColor: "#fff",
+                    data: [10, 20, 30, 40, 50]
+                }, {
+                    fillColor: "rgba(252,147,65,0.5)",
+                    strokeColor: "rgba(255,255,255,1)",
+                    pointColor: "rgba(173,173,173,1)",
+                    pointStrokeColor: "#fff",
+                    data: [28, 68, 40, 19, 96]
+                }]
+            };
+            // var myLineChart = ctx.Line(LineChart, options);
+
+            // 条形图
+            var BarChart = {
+                labels: ["Ruby", "jQuery", "Java", "ASP.Net", "PHP"],
+                datasets: [{
+                    fillColor: "rgba(151,249,190,0.5)",
+                    strokeColor: "rgba(255,255,255,1)",
+                    data: [13, 20, 30, 40, 50]
+                }, {
+                    fillColor: "rgba(252,147,65,0.5)",
+                    strokeColor: "rgba(255,255,255,1)",
+                    data: [28, 68, 40, 19, 96]
+                }]
+            };
+            var myBarChart = ctx.Bar(BarChart, options);
+
+
+            // 饼状图
+            var pieChart = [
+                { value: 40, color: "#fcc79c" },
+                { value: 30, color: "#beefd2" },
+                { value: 90, color: "#ffddfb" },
+            ];
+            //var myPieChart = ctx.Pie(pieChart);
+
+
+            // 环状图
+            var doughnutChart = [
+                { value: 60, color: "#fcc79e" },
+                { value: 30, color: "#beefd2" },
+                { value: 50, color: "#ffddfb" },
+                { value: 120, color: "#cdecff" },
+                { value: 90, color: "#fff5bc" }
+            ]
+
+        })
+    </script>
+</body>
+
+</html>
