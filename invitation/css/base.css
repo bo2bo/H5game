@@ -1,0 +1,112 @@
+body,
+html {
+    height: 100%;
+    width: 100%;
+    overflow: hidden
+}
+
+div {
+    box-sizing: border-box
+}
+
+a {
+    /* blr: expression(this.onFocus=this.blur()); */
+    -webkit-tap-highlight-color: transparent
+}
+
+:focus {
+    outline: 0
+}
+
+label {
+    cursor: pointer
+}
+
+img {
+    vertical-align: middle
+}
+
+table {
+    empty-cells: show;
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+abbr,
+acronym {
+    border: 0;
+    font-variant: normal
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+optgroup,
+p,
+td,
+th,
+var {
+    font-style: normal;
+    font-weight: 400;
+    max-height: 9999px
+}
+
+button,
+input,
+optgroup,
+option,
+select,
+textarea {
+    font-family: inherit;
+    font-size: inherit;
+    font-style: inherit;
+    font-weight: inherit
+}
+
+a,
+img {
+    border: 0
+}
+
+.clear {
+    display: block;
+    overflow: hidden;
+    clear: both;
+    height: 0;
+    line-height: 0;
+    font-size: 0
+}
+
+.clearfix:after {
+    content: " ";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden
+}
+
+.clearfix {
+    display: inline-table
+}
+
+* html .clearfix {
+    height: 1%
+}
+
+.clearfix {
+    display: block
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font: 12px "Microsoft YaHei"
+}
+
+* {
+    margin: 0;
+    padding: 0
+}

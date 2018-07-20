@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="x-rim-auto-match" content="none">
+    <title>邀请函</title>
+    <link href="//cdn.bootcss.com/Swiper/4.3.0/css/swiper.min.css" rel="stylesheet">
+    <link href="./css/animate.min.css" rel="stylesheet">
+    <link href="./css/base.css" rel="stylesheet">
+    <link href="./css/index.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div id="swiper" class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="pages page1 swiper-slide">
+                    <div class="pageCon">
+                        <div class="title">
+                            <p class="ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.8s" swiper-animate-delay="0.5s">邀请函</p>
+                        </div>
+                        <div class="subTitle">
+                            <p class="ani" swiper-animate-effect="zoomIn" swiper-animate-duration="0.3s" swiper-animate-delay="1.5s">博智宏观论坛</p>
+                        </div>
+                        <div class="content">
+                            <p class="ani" swiper-animate-effect="zoomIn" swiper-animate-duration="0.3s" swiper-animate-delay="1.5s">本期主题</p>
+                            <p class="ani" swiper-animate-effect="zoomIn" swiper-animate-duration="0.3s" swiper-animate-delay="1.5s">2018年上半年形势分析和下半年展望</p>
+                        </div>
+                        <div class="time">
+                            <p class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1.5s" swiper-animate-delay="0.3s">会议时间：2018.07.17 下午14:30（星期二）</p>
+                        </div>
+                        <div class="address">
+                            <p class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1.5s" swiper-animate-delay="0.3s">会议地点：中国 ● 北京</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="pages page2 swiper-slide">
+                    <div class="pageCon">
+                        <div class="title">
+                            <p class="ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="1s" swiper-animate-delay="0s">会议试听报名</p>
+                        </div>
+                        <div class="formData">
+                            <p class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="0.3s">
+                                <input type="text" name="userName" placeholder="姓名">
+                            </p>
+                            <p class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="0.6s">
+                                <input type="text" name="company" placeholder="单位">
+                            </p>
+                            <p class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="0.9s">
+                                <input type="text" name="job" placeholder="职务">
+                            </p>
+                            <p class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="1.2s">
+                                <input type="text" name="phone" placeholder="手机">
+                            </p>
+                            <p class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="1.5s">
+                                <input type="text" name="email" placeholder="邮箱">
+                            </p>
+                        </div>
+                        <div class="tip">
+                            <p class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1.5s" swiper-animate-delay="1.8s">请务必填写完整信息，经主办方审核后，会以邮件形式发送参会签到二维码</p>
+                        </div>
+                        <div class="submit">
+                            <p class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1.5s" swiper-animate-delay="2.1s">
+                                <input type="button" value="点击提交">
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/Swiper/4.3.0/js/swiper.min.js"></script>
+<script src="./js/swiper.animate1.0.3.min.js"></script>
+<script type="text/javascript">
+    window.onload = function () {
+        var mySwiper = new Swiper('.swiper-container', {
+            direction: 'vertical',
+            loop: false,
+            on: {
+                init: function () {
+                    swiperAnimateCache(this); //隐藏动画元素 
+                    swiperAnimate(this); //初始化完成开始动画
+                },
+                slideChangeTransitionEnd: function () {
+                    swiperAnimate(this); //每个slide切换结束时也运行当前slide动画
+                }
+            }
+        })
+    }
+</script>
+
+</html>
