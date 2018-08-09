@@ -47,19 +47,22 @@
                         </div>
                         <div class="formData">
                             <p class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="0.3s">
-                                <input type="text" name="userName" placeholder="姓名">
+                                <input type="text" name="userName" id="userName" placeholder="姓名" autocomplete="off">
+                                <span class="userName"></span>
                             </p>
                             <p class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="0.6s">
-                                <input type="text" name="company" placeholder="单位">
+                                <input type="text" name="phone" id="phone" placeholder="手机" autocomplete="off">
+                                <span class="phone"></span>
                             </p>
                             <p class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="0.9s">
-                                <input type="text" name="job" placeholder="职务">
+                                <input type="text" name="email" id="email" placeholder="邮箱" autocomplete="off">
+                                <span class="email"></span>
                             </p>
                             <p class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="1.2s">
-                                <input type="text" name="phone" placeholder="手机">
+                                <input type="text" name="company" placeholder="单位" autocomplete="off">
                             </p>
                             <p class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="1.5s">
-                                <input type="text" name="email" placeholder="邮箱">
+                                <input type="text" name="job" placeholder="职务" autocomplete="off">
                             </p>
                         </div>
                         <div class="tip">
@@ -67,7 +70,7 @@
                         </div>
                         <div class="submit">
                             <p class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1.5s" swiper-animate-delay="2.1s">
-                                <input type="button" value="点击报名">
+                                <input type="button" value="点击报名" id="submit">
                             </p>
                         </div>
                     </div>
@@ -80,22 +83,6 @@
 <script src="//cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/Swiper/4.3.0/js/swiper.min.js"></script>
 <script src="./js/swiper.animate1.0.3.min.js"></script>
-<script type="text/javascript">
-    window.onload = function () {
-        var mySwiper = new Swiper('.swiper-container', {
-            direction: 'vertical',
-            loop: false,
-            on: {
-                init: function () {
-                    swiperAnimateCache(this); //隐藏动画元素 
-                    swiperAnimate(this); //初始化完成开始动画
-                },
-                slideChangeTransitionEnd: function () {
-                    swiperAnimate(this); //每个slide切换结束时也运行当前slide动画
-                }
-            }
-        })
-    }
-</script>
+<script src="./js/index.js"></script>
 
 </html>

@@ -10,7 +10,8 @@
     height: 100%;
     width: 100%;
 }
-.pages{
+
+.pages {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,7 +20,8 @@
 .page1 {
     background-color: aquamarine;
 }
-.page1 p{
+
+.page1 p {
     margin-top: 30px;
 }
 
@@ -53,38 +55,54 @@
 .page2 {
     background-color: rgb(150, 127, 255);
 }
+
 .page2 .title p {
     font-size: 50px;
     text-align: center;
 }
-.page2 .formData p{
+
+.page2 .formData p {
     font-size: 30px;
     text-align: center;
     margin-top: 40px;
 }
-.page2 .tip{
+
+.formData p span {
+    display: block;
+    font-size: 18px;
+    color: #BD362F;
+    margin-top: 10px;
+}
+
+.page2 .tip {
     width: 60%;
     margin: 0 auto;
 }
-.page2 .tip p{
+
+.page2 .tip p {
     font-size: 20px;
     text-align: center;
     margin-top: 40px;
 }
-.page2 .submit p{
+
+.page2 .submit p {
     font-size: 30px;
     text-align: center;
     margin-top: 40px;
 }
-.page2 .pageCon input{
+
+.page2 .pageCon input {
     border-radius: 10px;
     height: 50px;
     padding-left: 10px;
+    font-size: 28px;
 }
-.page2 .submit input{
+
+.page2 .submit input {
     padding-left: 0px;
     width: 170px;
     background-color: #6edcf6;
     font-size: 26px;
     border-width: 0px;
+    cursor: pointer;
 }
