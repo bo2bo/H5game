@@ -15,10 +15,51 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #ececec;
 }
 
 .page1 {
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
+}
+
+.page1 .pageCon {
+    position: absolute;
+}
+
+.page1 .pageBg div:nth-child(1) {
+    opacity: 0.21;
+}
+
+.page1 .pageBg div:nth-child(2) {
+    opacity: 0.25;
+}
+
+.page1 .pageBg div:nth-child(3) {
+    opacity: 0.24;
+}
+
+.page1 .pageBg div:nth-child(1) img {
+    width: 57%;
+    position: absolute;
+    left: 21.375%;
+    top: 5.61068%;
+    height: 27.79%;
+}
+
+.page1 .pageBg div:nth-child(2) img {
+    width: 100%;
+    position: absolute;
+    left: -0.629883%;
+    top: 24.8763%;
+    height: 49%;
+}
+
+.page1 .pageBg div:nth-child(3) img {
+    width: 100%;
+    position: absolute;
+    left: -0.629883%;
+    top: 40.2865%;
+    height: 49.13%;
 }
 
 .page1 p {
@@ -53,7 +94,7 @@
 }
 
 .page2 {
-    background-color: rgb(150, 127, 255);
+    /* background-color: rgb(150, 127, 255); */
 }
 
 .page2 .title p {
