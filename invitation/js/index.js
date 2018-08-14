@@ -48,7 +48,7 @@ $(function () {
             }
         }
         if ($(this).is("#email")) { //email判断
-            var email = new RegExp("^[a-z0-9]+([._\\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+$");
+            var email = /^\w+@\w+(\.\w+)+$/;
             if ($("#email").val() != "") {
                 if (!(email.test($("#email").val()))) {
                     $(".email").text("请输入格式正确的邮箱").css("color", "#BD362F");
@@ -74,7 +74,7 @@ $(function () {
             $(this).css("border", "1px solid #aaa")
         }
         if ($(this).is("#email")) {
-            $(".email").text("请输入正确邮箱").css("color", "#333")
+            $(".email").text("请输入正确邮箱便于以后接受邮件").css("color", "#333")
             $(this).css("border", "1px solid #aaa")
         }
     })
@@ -101,7 +101,7 @@ $(function () {
             userJob = $('input[name="job"]').val();
         var na = /^[\u4E00-\u9FA5]{2,15}$/; //姓名正则
         var ph = /^1[3|5|7|8|][0-9]{9}$/; //手机号正则
-        var em = new RegExp("^[a-z0-9]+([._\\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+$"); //邮箱正则
+        var em = /^\w+@\w+(\.\w+)+$/; //邮箱正则
         if (na.test(userName) && ph.test(userPhone) && em.test(userEmail)) {
             $.ajax({
                 url: 'http://192.168.1.62:8080/enroll',
