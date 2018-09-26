@@ -1,0 +1,140 @@
+@charset "utf-8";
+
+/*
+ * Author:UED
+ * Version:1.0.0
+*/
+html {
+    font-size: 75px;
+}
+
+@media screen and (min-width:320px) {
+    html {
+        font-size: 64px;
+    }
+}
+
+@media screen and (min-width:360px) {
+    html {
+        font-size: 72px;
+    }
+}
+
+@media screen and (min-width:375px) {
+    html {
+        font-size: 75px;
+    }
+}
+
+@media screen and (min-width:414px) {
+    html {
+        font-size: 82.8px;
+    }
+}
+
+body,
+button,
+input,
+select,
+textarea {
+    font: 0.173333rem/1.5 Arial, San Francisco, Helvetica, SimHei, SimSun, sans-serif;
+    line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+b,
+strong {
+    font-weight: normal;
+}
+
+button,
+input,
+select,
+textarea {
+    padding: 0;
+    background: none;
+    border: 0;
+    font-size: inherit;
+}
+
+input:focus {
+    outline: 0;
+}
+
+i {
+    font-style: normal;
+}
+
+a {
+    text-decoration: none;
+}
+
+dfn {
+    font-weight: normal;
+    font-style: normal;
+}
+
+html,
+body {
+    background-color: #EAEAEA;
+}
+
+#container {
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.dropload-refresh,
+.dropload-update,
+.dropload-load,
+.dropload-noData {
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.dropload-load .loading {
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    border-radius: 100%;
+    margin: 6px;
+    border: 2px solid #666;
+    border-bottom-color: transparent;
+    vertical-align: middle;
+    -webkit-animation: rotate 0.75s linear infinite;
+    animation: rotate 0.75s linear infinite;
+}
+
+@-webkit-keyframes rotate {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    50% {
+        -webkit-transform: rotate(180deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
